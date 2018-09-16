@@ -1,0 +1,430 @@
+/* Universal styles */
+
+html{
+  font-family: "Poppins";
+  font-size:20px;
+  color:#505151;
+  overflow-x: hidden;
+}
+
+body{
+  line-height: 1.4;
+}
+    /*General container class*/
+.container{
+  display:block;
+  margin:auto;
+
+}
+
+    /*General flex container class*/
+.flex{
+  display: flex;
+  align-items: center;
+
+}
+    /*General container for images (like the banner)*/
+.image-container{
+  display: inline-block;
+
+}
+
+    /*Button styling*/
+.button{
+  width:100%;
+}
+
+a{
+  color:#93bcff;
+}
+
+    /*Paragraph stylings */
+#big{
+  font-size: 2.6rem;
+  font-weight: bold;
+  color:#505151;
+}
+
+#small{
+  font-size: .75rem;
+  color: black;
+}
+
+#title{
+  font-size:1.5rem;
+  font-weight: bold;
+  color:#505151;
+  margin-bottom: 8px;
+}
+
+#classes{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.bolded{
+  font-weight: bold;
+  color:black;
+}
+
+
+    /*Division title items*/
+.title{
+  width:100%;
+  text-align: center;
+}
+
+.title p{
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+    /*Styling for the left-side items*/
+.left{
+  width:60%;
+  margin: 32px 24px;
+}
+
+    /*Styling foor the right-side items*/
+.right{
+  width:40%;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+    /*Styling for images & videos*/
+img{
+  width:100%;
+}
+
+video{
+  width:100%;
+}
+
+
+
+
+
+
+
+/*Header styling*/
+
+header .container{
+  padding-left: 24px;
+  height:64px;
+}
+
+    /*Makes the image look a little bit bigger*/
+header img{
+  height:90%;
+  width:auto;
+}
+
+    /*Colmar Acdemy*/
+#head-title{
+  font-size: 1.5rem;
+}
+    /*Styles the left side of the header (nav)*/
+header nav{
+  width:100%;
+  justify-content: flex-end;
+  padding-right: 24px;
+}
+    /*Makes p's look neat*/
+header nav p{
+  display: inline;
+  margin-left:16px;
+}
+
+.mobile{
+  width:100%;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width:500px){
+  .desktop{
+    display: none;
+  }
+  header .container{
+    display: none;
+  }
+}
+
+@media only screen and (min-width:500px){
+  .mobile{
+    display: none;
+  }
+}
+
+
+
+
+
+
+/*Banner Styling*/
+.banner{
+  background-color: lightgrey;
+}
+
+  /*Right side of the banner*/
+.banner .right.container{
+  position: relative;
+}
+
+
+#banner-content{
+  margin-top:1rem;
+  margin-bottom:2rem;
+  font-weight: bold;
+}
+
+  /*Button styling*/
+.banner .button{
+  text-align: center;
+  color:white;
+  background-color:#575859;
+}
+
+.banner .button p{
+  padding:  8px 0px;
+  font-size: 1.5rem;
+}
+
+.banner .right .container{
+  display: inline-block;
+}
+
+@media only screen and (max-width:500px){
+  .banner{
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .right,.left,.container{
+    margin:0;
+
+    width:100%;
+  }
+
+  .banner .button{
+    margin-bottom: 32px;
+  }
+}
+
+
+
+
+
+
+
+/*Information styling*/
+.information{
+  align-items: flex-start;
+  align-content: flex-end;
+}
+  /*Left Side information styling*/
+      /*Left side text styling*/
+.information #big{
+  margin:32px 0px 24px 0px;
+}
+
+.information #small{
+  margin-top: 2rem;
+}
+
+  /*Right side information styling*/
+  .information .right{
+    flex-direction: column;
+  }
+        /*Picture styling*/
+.snippet .image-container{
+  width:35%;
+}
+        /*Small container styling*/
+.snippet .container{
+  width:65%;
+}
+
+.snippet{
+  width: 100%;
+    transition: all 0.4s ease-in 0.1s;
+}
+ .snippet.container p,a{
+   margin-left: 30px;
+   margin-right: 60px;
+   margin-bottom: 8px;
+}
+          /*Image styling*/
+.snippet img{
+margin:16px 16px;
+}
+
+.snippet:hover{
+  background-color: lightgrey;
+}
+
+@media only screen and (max-width:500px){
+  .information{
+    flex-direction: column;
+    justify-content: flex-start;
+
+  }
+
+  .information .left{
+    display: none;
+  }
+
+  .snippet{
+    flex-direction: column;
+  }
+
+  .snippet img{
+    margin:auto;
+    width:80%;
+  }
+
+  .snippet .container{
+    width:100%;
+  }
+}
+
+
+
+
+/*Courses styling*/
+.courses{
+  background-color: lightgrey;
+  flex-direction: column;
+  color:#bababa;
+}
+
+#courses-section{
+  flex-wrap: wrap;
+  margin:0px 72px;
+}
+
+    /*Individual class styling*/
+.course{
+  background-color: white;
+  max-width: 480px;
+  height:490px;
+  margin-bottom:32px;
+  flex-shrink: 1;
+}
+
+        /*Picture styling*/
+.course img{
+  width:100%;
+  height: auto;
+}
+        /*Text styling*/
+.course p{
+  margin-right: 60px;
+  margin-left:16px;
+}
+
+.course #title{
+  margin-top: 16px;
+}
+
+/*Button styling*/
+.courses .button{
+  background-color: #cfcfcf;
+  margin-bottom: 8px;
+  width:80%;
+}
+
+.courses .button p{
+  padding: 16px 0px 24px 16px;
+}
+
+@media only screen and (max-width:500px){
+  .courses{
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    margin-bottom: 32px;
+  }
+
+  .title{
+    background-color: white;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/*Thesis exhibit styling*/
+.thesis{
+    align-items: flex-start;
+    align-content: flex-end;
+    margin-bottom: 50px;
+}
+  /*Left side styling*/
+.thesis .left{
+    margin: 0px 24px;
+}
+
+video{
+  margin-bottom: 24px;
+}
+  /*Right side styling*/
+.thesis .right{
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+.thesis #title{
+  margin-bottom:8px;
+}
+
+@media only screen and (max-width:500px){
+  .thesis{
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 32px;
+  }
+
+  .thesis .right,.left{
+    display: none;
+  }
+
+}
+
+
+
+
+
+
+
+
+/*Footer styling*/
+
+footer{
+  border-top: 1px solid grey;
+  height:100px;
+}
+
+footer .container{
+  padding-left: 24px;
+  justify-content: space-between;
+}
+
+footer nav{
+  justify-content: flex-end;
+  padding-right: 24px;
+}
+    /*Makes p's look neat*/
+footer nav p{
+  display: inline;
+  margin-left:16px;
+}
+
+footer #small{
+  color:#505151;
+  margin-top: 32px;
+}
